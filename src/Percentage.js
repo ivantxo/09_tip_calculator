@@ -1,15 +1,13 @@
 import { useState } from "react";
 
-function Percentage({ label }) {
-  const [percentage, setPercentage] = useState("");
-
+function Percentage({ label, percentage, onPercentage }) {
   return (
     <div>
       <span>{label}</span>{" "}
       <span>
         <select
           value={percentage}
-          onChange={(e) => setPercentage(e.target.value)}
+          onChange={(e) => onPercentage(Number(e.target.value))}
         >
           <option value="">Select an option</option>
           <option value="0">Disatisfied (0%)</option>

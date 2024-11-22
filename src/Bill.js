@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-function Bill() {
-  const [bill, setBill] = useState("");
-
+function Bill({ bill, setBill }) {
   return (
     <div>
       <span>How much was the bill?</span>{" "}
@@ -10,7 +6,7 @@ function Bill() {
         <input
           type="text"
           value={bill}
-          onChange={(e) => setBill(e.target.value)}
+          onChange={(e) => setBill(Number(e.target.value))}
         />
       </span>
       <br />

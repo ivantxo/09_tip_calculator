@@ -1,7 +1,8 @@
-function Output() {
+function Output({ bill, totalPercentage }) {
+  const totalBill = bill + totalPercentage;
   return (
     <div style={{ fontWeight: "bold" }}>
-      You pay xx (x + x)
+      You pay {totalBill} ({bill} + {totalPercentage})
       <br />
       <br />
     </div>
